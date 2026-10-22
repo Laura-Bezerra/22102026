@@ -1,13 +1,13 @@
 # Entre nós ♡
 
-Site com liberação em **22/10/2026 às 16h05, horário de Brasília**, seguida de um quiz de dez perguntas e duas fases de plataforma. Requer Python 3.9 ou superior, sem pacotes externos.
+Site com liberação em **22/10/2026 às 19h, horário de Brasília**, seguida de um quiz de dez perguntas e duas fases de plataforma. Requer Python 3.9 ou superior, sem pacotes externos.
 
 ```sh
 cd /workspace/22102026
 python server.py
 ```
 
-O servidor usa a porta 3000, configurável por `PORT`. Para mudar a data, use `UNLOCK_AT` com fuso explícito, por exemplo `UNLOCK_AT='2026-10-23T16:05:00-03:00' python server.py`.
+O servidor usa a porta 3000, configurável por `PORT`. Para mudar a data, use `UNLOCK_AT` com fuso explícito, por exemplo `UNLOCK_AT='2026-10-23T19:00:00-03:00' python server.py`.
 
 Edite `MESSAGE` em `server.py` para trocar o texto final. As respostas e a mensagem ficam no servidor; o relógio do servidor controla a liberação. Depois do horário, o site continua disponível. Não há senha ou identificação: qualquer pessoa com acesso ao site pode responder ao quiz.
 
