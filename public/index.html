@@ -1,0 +1,179 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080f23">
+  <title>Uma mensagem pra você ♡</title>
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,500;0,600;1,500&display=swap');
+    *{box-sizing:border-box}body{margin:0;min-height:100svh;background:#080f23;color:#e6edff;font-family:'DM Sans',sans-serif;display:flex;flex-direction:column}main{flex:1;display:grid;place-items:center;padding:35px 20px 60px;background:radial-gradient(ellipse at 50% 45%,#385f9c35,transparent 65%)}.card{width:min(100%,570px);text-align:center;background:#101c34;border:1px solid #2b3d60;border-radius:160px 160px 22px 22px;padding:58px 42px 38px;box-shadow:0 18px 70px #00000035}.icon{width:70px;height:70px;margin:0 auto 25px;background:#1d3153;border-radius:50%;display:grid;place-items:center;color:#b1c8ff;font-size:32px}.eyebrow{text-transform:uppercase;letter-spacing:3px;font-size:10px;color:#9db7ed;font-weight:700}h1{font-family:'Playfair Display',Georgia,serif;font-size:clamp(32px,7vw,45px);line-height:1.2;font-weight:500;margin:17px 0}h1 em{color:#b1c8ff}p{font-size:14px;line-height:1.8;color:#aebed9;margin:16px auto;max-width:350px}.timer{display:flex;justify-content:center;gap:18px;margin:30px 0}.timer div{min-width:66px}.timer strong{display:block;font-family:Georgia,serif;font-weight:400;font-size:37px}.timer small{font-size:9px;letter-spacing:2px;color:#9eafd0}.colon{padding-top:7px;color:#7991bd;font-size:25px}.note{border-top:1px solid #2a3d5c;padding-top:22px;font-size:11px;color:#a6b7d4}.button{font:inherit;font-size:14px;width:100%;border:1px solid #344b73;background:#101c34;border-radius:12px;padding:17px;color:#e6edff;cursor:pointer;transition:.2s}.button:hover{background:#1d3153;border-color:#94baff;transform:translateY(-2px)}.button:focus-visible{outline:3px solid #94baff;outline-offset:3px}.button:disabled{opacity:.5;cursor:wait}.primary{background:#35558a;color:white;border-color:#35558a;margin-top:15px}.options{display:grid;gap:12px;margin:30px 0 10px}.feedback{min-height:25px;color:#ffb3c3;font-weight:600}.steps{display:flex;gap:7px;justify-content:center;margin:22px}.steps i{width:32px;height:3px;border-radius:3px;background:#2a3d5c}.steps i.active{background:#94baff}.message{white-space:pre-wrap;background:#172844;border:1px solid #344b73;border-radius:14px;padding:24px;font-size:14px;line-height:1.9;margin-top:27px;overflow-wrap:anywhere}footer{text-align:center;padding:22px;font-size:11px;color:#93a8ce;letter-spacing:1px}.hidden{display:none!important}@media(max-width:480px){.card{padding:46px 24px 30px;border-radius:125px 125px 20px 20px}main{padding-top:15px}}
+    body{background-image:radial-gradient(1px 1px at 12% 18%,#d3e2ffbb 90%,transparent),radial-gradient(1px 1px at 82% 12%,#d3e2ff99 90%,transparent),radial-gradient(2px 2px at 90% 60%,#d3e2ff66 90%,transparent),radial-gradient(1px 1px at 6% 77%,#d3e2ff99 90%,transparent),radial-gradient(1px 1px at 65% 89%,#d3e2ff88 90%,transparent);background-attachment:fixed}
+    .together{margin:28px 0 8px;padding:24px 0 0;border-top:1px solid #2a3d5c}.together h2{font-family:'Playfair Display',Georgia,serif;font-weight:500;font-size:25px;margin:0 0 8px;color:#d9e5ff}.together .since{font-size:11px;margin:0 0 20px;color:#aebed9;max-width:none}.love-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.love-unit{background:#0b162c;border:1px solid #263b5d;border-radius:12px;padding:15px 8px}.love-unit strong{display:block;font-size:29px;font-weight:500;color:#d9e5ff;font-variant-numeric:tabular-nums;overflow-wrap:anywhere}.love-unit span{display:block;font-size:10px;letter-spacing:1px;color:#aebed9;margin-top:5px}.love-unit:last-child{grid-column:1/-1;background:#16294a}.love-unit:last-child strong{font-size:clamp(26px,7vw,36px)}.together .count-note{font-size:10px;margin:14px 0 0;max-width:none}
+    body{position:relative;isolation:isolate}
+    body::before,body::after{content:"";position:fixed;inset:0;pointer-events:none;z-index:-1;background-repeat:no-repeat}
+    body::before{background-image:radial-gradient(1px 1px at 20% 30%,#c6d9ff 80%,transparent),radial-gradient(2px 2px at 73% 24%,#c6d9ff 80%,transparent),radial-gradient(1px 1px at 88% 80%,#c6d9ff 80%,transparent);animation:starlight 7s ease-in-out infinite alternate}
+    body::after{background-image:radial-gradient(1px 1px at 40% 8%,#c6d9ff 80%,transparent),radial-gradient(1px 1px at 8% 52%,#c6d9ff 80%,transparent),radial-gradient(2px 2px at 60% 93%,#c6d9ff 80%,transparent);animation:starlight 9s ease-in-out -4s infinite alternate}
+    .moon{width:64px;height:64px;display:grid;place-items:center;margin:0 auto 24px;color:#d2def4;filter:drop-shadow(0 0 15px #93b4ed30);animation:moonrise 1.3s ease-out both}
+    .card{animation:arrive .85s ease-out both}
+    #loading:not(.hidden),#locked:not(.hidden),#welcome:not(.hidden),#quiz:not(.hidden),#done:not(.hidden){animation:arrive .55s ease-out both}
+    #question{animation:arrive .4s ease-out both}
+    .options .button{animation:arrive .4s ease-out both}.options .button:nth-child(2){animation-delay:.08s}
+    .button{transition:background .2s,border-color .2s,transform .2s,box-shadow .2s}.button:hover{box-shadow:0 4px 22px #799ed51a}.button:active{transform:scale(.98)}
+    .message{animation:letter-open .9s ease-out both}
+    @keyframes starlight{from{opacity:.2}to{opacity:.85}}
+    @keyframes moonrise{from{opacity:0;transform:translateY(10px) rotate(-12deg)}to{opacity:1;transform:translateY(0) rotate(0)}}
+    @keyframes arrive{from{opacity:0;transform:translateY(12px)}to{opacity:1;transform:translateY(0)}}
+    @keyframes letter-open{from{opacity:0;transform:translateY(16px)}to{opacity:1;transform:translateY(0)}}
+    @media(prefers-reduced-motion:reduce){*,*::before,*::after{animation:none!important;transition:none!important}}
+    #world{display:block;width:100%;height:auto;border-radius:14px;border:1px solid #334a71;background:#080f23;outline-offset:4px;touch-action:none}
+    .game-controls{display:flex;gap:10px;margin-top:14px}.game-controls button{font:inherit;font-size:20px;min-height:52px;min-width:62px;border:1px solid #405b89;border-radius:12px;color:#e6edff;background:#192d4c;touch-action:none;user-select:none}.game-controls button:last-child{margin-left:auto;font-size:15px;padding:0 20px}.game-controls button:active{background:#35558a}.game-controls button:focus-visible{outline:3px solid #b1c8ff;outline-offset:3px}.game-help{font-size:11px!important}#game-status{font-size:13px}
+    #question{font-size:clamp(23px,5.5vw,34px);line-height:1.35}.options .button{text-align:left;line-height:1.55}.steps i{flex:1;max-width:32px}
+    .message{text-align:left;line-height:1.95;font-size:15px}#done{scroll-margin-top:24px}
+    .card.reading{width:min(100%,900px);padding:50px 32px 32px;border-radius:40px 40px 22px 22px}
+    .card.reading .message{padding:30px 36px}
+    @media(max-width:600px){main:has(.reading){padding-left:10px;padding-right:10px}.card.reading{padding:30px 10px 18px;border-radius:24px}.card.reading .message{padding:22px 16px}}
+  </style>
+</head>
+<body>
+  <main><section class="card" aria-live="polite">
+    <div class="moon" aria-hidden="true"><svg viewBox="0 0 64 64" width="54" height="54"><path d="M46 47A25 25 0 0 1 25 8a24 24 0 1 0 21 39Z" fill="currentColor"/></svg></div>
+    <div id="loading"><div class="eyebrow">um instante</div><h1>Preparando um<br><em>pequeno segredo.</em></h1></div>
+    <div id="locked" class="hidden"><div class="eyebrow">tudo tem sua hora</div><h1>Uma surpresa.<br><em>Um pouquinho de espera.</em></h1><p>Tem uma mensagem guardada aqui.<br>Ela abre no horário combinado, só pra você.</p><div class="timer" aria-label="Tempo restante"><div><strong id="hours">00</strong><small>HORAS</small></div><span class="colon">:</span><div><strong id="minutes">00</strong><small>MINUTOS</small></div><span class="colon">:</span><div><strong id="seconds">00</strong><small>SEGUNDOS</small></div></div><div class="note" id="schedule"></div></div>
+    <div id="welcome" class="hidden"><div class="eyebrow">a espera acabou</div><h1>Tenho uma coisa<br><em>pra te mostrar.</em></h1><p>O quanto você me conhece?<br>Enfrente os desafios e desbloqueie um recadinho pra você.</p><button class="button primary" id="start">Estou pronta pra começar!</button></div>
+    <div id="quiz" class="hidden"><div class="eyebrow" id="progress"></div><div class="steps" id="quiz-steps" aria-hidden="true"></div><h1 id="question"></h1><div class="options" id="options"></div><div class="feedback" id="feedback" role="status"></div></div>
+    <div id="game" class="hidden">
+      <div class="eyebrow" id="phase-label">fase 1 de 2</div>
+      <h1>Essa é pra você,<br><em>Adrielly.</em></h1>
+      <p>Vá até a cartinha. Cuidado com a plataforma que se move!<br>Se cair, pode tentar de novo.</p>
+      <canvas id="world" width="720" height="420" tabindex="0" role="img" aria-label="Jogo de plataforma. Use as setas para andar e espaço para pular até a carta à direita."></canvas>
+      <div class="game-controls" aria-label="Controles do jogo"><button type="button" data-key="left" aria-label="Andar para a esquerda">←</button><button type="button" data-key="right" aria-label="Andar para a direita">→</button><button type="button" data-key="jump">Pular ↑</button></div>
+      <p class="game-help">No teclado: ← → ou A e D · espaço para pular</p>
+      <p id="game-status" role="status">A cartinha está do outro lado.</p>
+      <button type="button" class="button hidden" id="open-letter">Abrir a cartinha</button>
+    </div>
+    <div id="done" class="hidden"><div class="eyebrow">você acertou todas</div><h1>Mensagem<br><em>desbloqueada</em></h1><div class="message" id="message"></div><p>Um segredinho nosso. ♡</p></div>
+    <section class="together hidden" id="together" aria-label="Tempo que estamos juntas">
+      <h2>O nosso tempo</h2>
+      <p class="since">Desde 22 de junho de 2020</p>
+      <div class="love-grid" role="timer" aria-live="off">
+        <div class="love-unit"><strong id="love-years">0</strong><span>ANOS COMPLETOS</span></div>
+        <div class="love-unit"><strong id="love-months">0</strong><span>MESES COMPLETOS</span></div>
+        <div class="love-unit"><strong id="love-weeks">0</strong><span>SEMANAS COMPLETAS</span></div>
+        <div class="love-unit"><strong id="love-days">0</strong><span>DIAS COMPLETOS</span></div>
+        <div class="love-unit"><strong id="love-seconds">0</strong><span>SEGUNDOS DE NÓS</span></div>
+      </div>
+      <p class="count-note">Não lembro de todos os dias, mas lembro de querer você neles.</p>
+    </section>
+    <div id="error" class="feedback" role="alert"></div>
+  </section></main>
+  <footer>Que sorte a minha dividir os dias com você.</footer>
+  <script>
+    let token, offset=0, unlockAt=0, timer;
+    const el=id=>document.getElementById(id);
+    const relationshipStart=Date.parse('2020-06-22T12:00:00-03:00');
+    function relationshipTotals(now){
+      const safeNow=Math.max(relationshipStart,now);
+      // Brasília is UTC−03:00 throughout the configured relationship period.
+      const local=new Date(safeNow-3*3600000);
+      let months=(local.getUTCFullYear()-2020)*12+local.getUTCMonth()-5;
+      const anniversary=Date.UTC(local.getUTCFullYear(),local.getUTCMonth(),22,15);
+      if(safeNow<anniversary)months--;
+      months=Math.max(0,months);
+      const seconds=Math.floor((safeNow-relationshipStart)/1000);
+      return {years:Math.floor(months/12),months,weeks:Math.floor(seconds/604800),days:Math.floor(seconds/86400),seconds};
+    }
+    function updateTogether(){
+      const totals=relationshipTotals(Date.now()+offset);
+      for(const [unit,value] of Object.entries(totals))el('love-'+unit).textContent=value.toLocaleString('pt-BR');
+    }
+    function show(id){document.querySelector('.card').classList.toggle('reading',id==='done');el('together').classList.toggle('hidden',!['locked','welcome'].includes(id));for(const name of ['loading','locked','welcome','quiz','game','done'])el(name).classList.toggle('hidden',name!==id)}
+    let staticMode=false, localStep=0;
+    const localUnlockAt='2026-10-22T16:05:00-03:00';
+    const localQuestions=[{"number": 1, "total": 10, "text": "Em que dia da semana começamos a namorar?", "options": ["Sexta-feira", "Domingo", "Segunda-feira", "Sábado"], "answer": "Segunda-feira"}, {"number": 2, "total": 10, "text": "Onde tomamos o melhor mojito da nossa vida?", "options": ["Paraty – RJ", "Porto Seguro – BA", "Ilhabela – SP", "Florianópolis – SC"], "answer": "Porto Seguro – BA"}, {"number": 3, "total": 10, "text": "Qual é a minha princesa favorita?", "options": ["Rapunzel", "Merida", "Bela", "Elsa"], "answer": "Bela"}, {"number": 4, "total": 10, "text": "Por que o emoji que me representa é um robô?", "options": ["Porque eu gosto muito de tecnologia", "Porque meu celular era Android", "Porque eu cursei Mecatrônica", "Porque eu danço igual um robô"], "answer": "Porque meu celular era Android"}, {"number": 5, "total": 10, "text": "Qual filme eu estava assistindo quando voltamos da viagem de Gramado?", "options": ["Shrek", "Bob Esponja", "Procurando Nemo", "A Era do Gelo"], "answer": "Bob Esponja"}, {"number": 6, "total": 10, "text": "Qual música estava tocando quando eu olhei pra você e pensei: \"Eu quero essa garota\"?", "options": ["Dona de Mim — IZA", "Talismã — IZA", "Meu Abrigo — Melim", "Brisa — IZA"], "answer": "Talismã — IZA"}, {"number": 7, "total": 10, "text": "Quando eu percebi que te amava de verdade?", "options": ["Quando senti saudade de você pela primeira vez", "Quando percebi que queria passar a vida ao seu lado", "Quando você ficou doente e minha vontade foi cuidar de você, em vez de fugir", "Quando tivemos nossa primeira conversa sobre o futuro juntas"], "answer": "Quando você ficou doente e minha vontade foi cuidar de você, em vez de fugir"}, {"number": 8, "total": 10, "text": "O que eu sempre quis ganhar, mas nunca ganhei nem comprei?", "options": ["Um telescópio", "Um kit de mágica", "Um banco imobiliário", "Um videogame"], "answer": "Um kit de mágica"}, {"number": 9, "total": 10, "text": "O que eu odeio que aconteça?", "options": ["Quando alguém começa a gostar de algo só porque eu recomendei", "Quando algo que eu gosto há muito tempo vira hype e todo mundo começa a gostar também", "Quando alguém critica uma coisa de que eu gosto muito", "Quando uma série tem muitas temporadas"], "answer": "Quando algo que eu gosto há muito tempo vira hype e todo mundo começa a gostar também"}, {"number": 10, "total": 10, "text": "Qual alimento eu parei de comer quando era pequena porque disse que não gostava, mesmo gostando, e minha vó levou isso para a vida?", "options": ["Queijo", "Ovo", "Banana", "Tomate"], "answer": "Ovo"}];
+    function localApi(path,data){
+      const unlocked=Date.now()>=Date.parse(localUnlockAt);
+      if(path==='/api/status')return {unlocked,unlockAt:localUnlockAt,serverTime:Date.now()};
+      if(!unlocked)throw Error('Ainda não chegou a hora.');
+      if(path==='/api/start'){localStep=0;return {token:'local',question:localQuestions[0]}}
+      if(path==='/api/finish'){if(localStep===localQuestions.length&&data.phase===1){localStep=localQuestions.length+1;return {nextPhase:2}}if(localStep!==localQuestions.length+1||data.phase!==2)throw Error('Responda às perguntas primeiro.');localStep=localQuestions.length+2;return {message:"São quase 200 milhões de segundos dividindo a vida com você. Quase 200 milhões de segundos descobrindo, dia após dia, que a vida faz muito mais sentido ao seu lado. Que, na verdade, eu já nem sei se consigo imaginar uma vida sem você nela.\n\nSe lá atrás alguém me contasse que um dia eu sentiria tanto amor, que alguém seria capaz de despertar tanta coisa em mim, eu duvidaria até o último segundo. Eu não acreditaria que fosse possível amar alguém dessa forma, com tanta intensidade, tanta certeza e, ao mesmo tempo, com a sensação de que ainda existe um amor inteiro dentro de mim esperando para ser descoberto.\n\nMas hoje eu sei.\n\nE eu viveria mais cinquenta vezes se soubesse que, em cada uma dessas vidas, eu encontraria você. Mesmo que demorasse, mesmo que nossos caminhos fossem diferentes, mesmo que eu precisasse atravessar o mundo inteiro sem saber o que estava procurando. Se no final fosse você, eu iria.\n\nEu repetiria todas as decisões da minha vida, inclusive as erradas, enfrentaria todos os dias difíceis e percorreria cada caminho novamente, se tivesse a certeza de que todos eles, de alguma forma, me levariam até você.\n\nPorque, de todas as coisas que poderiam ter acontecido comigo, encontrar você foi a minha favorita.\n\nVocê torna tudo mais bonito (e, convenhamos, é só você ficar na minha frente pra eu achar isso, rs). Você me faz querer ser melhor, me faz enxergar beleza até nas coisas feias. E talvez você nem tenha ideia disso, mas o mundo é um lugar melhor porque você existe nele.\n\nE quando eu acho que nada mais vale a pena, quando o mundo parece pesado demais e eu esqueço as coisas boas que ele tem, você me lembra. Não porque seja sua responsabilidade fazer tudo ficar bem, mas porque existe algo extraordinário em saber que, mesmo nos dias mais difíceis, existe você. Com esse seu sorriso lindo, esse olhar brilhoso, esse jeitinho que é só seu e que eu reconheceria em qualquer lugar do mundo.\n\nEu amo quem você é. Amo quem eu sou quando estou com você. Amo as nossas conversas, as nossas besteiras, as nossas diferenças e até os momentos em que você me irrita.\n\nE amo, principalmente, saber que depois de tantos dias, tantas mudanças e tantas versões de nós mesmas, eu continuo olhando para você e pensando que é você. Que sempre foi você. E que, se a vida me permitir escolher, vai continuar sendo você.\n\nÀs vezes penso em como é curioso que, entre tantas pessoas, tantos lugares e tantas possibilidades, duas vidas tenham se encontrado e decidido caminhar juntas.\n\nSeis anos e quatro meses depois, eu ainda tenho vontade de te conhecer mais, de descobrir seus novos sonhos, de acompanhar todas as mulheres que você ainda vai se tornar e de amar cada uma delas.\n\nPorque eu não quero apenas o amor bonito dos dias fáceis. Quero a vida de verdade com você. Os dias comuns, as manhãs sonolentas, as risadas sem motivo, as conquistas, os planos que dão certo e aqueles que precisamos refazer. Quero ter histórias para contar e, quando a memória falhar, ter você ao meu lado para me lembrar de como foi.\n\nE se um dia me perguntarem o que eu faria diferente na minha vida, acho que minha resposta seria: teria procurado você um pouquinho antes.\n\nFeliz mais um dia 22, meu amor.\n\nDe todos os segundos que já vivi, os meus favoritos são aqueles em que a vida me deu você. E de todos os que ainda estão por vir, espero que a maioria seja ao seu lado.\n\nEu te amo. Muito mais do que esses quase 200 milhões de segundos seriam capazes de explicar."}}
+      if(localStep>=localQuestions.length)throw Error('Comece novamente.');
+      if(data.answer!==localQuestions[localStep].answer)return {correct:false,feedback:'tenta de novo linda não é essa não'};
+      localStep++;
+      if(localStep===localQuestions.length)return {correct:true,game:true};
+      return {correct:true,question:localQuestions[localStep]};
+    }
+    async function api(path,data){
+      if(staticMode)return localApi(path,data);
+      let response;
+      try{
+        response=await fetch(path,{method:data?'POST':'GET',headers:data?{'Content-Type':'application/json'}:{},body:data?JSON.stringify(data):undefined,signal:AbortSignal.timeout(6000)});
+      }catch(error){
+        if(path==='/api/status'){staticMode=true;return localApi(path,data)}
+        throw Error('Não foi possível conectar ao servidor.');
+      }
+      const contentType=response.headers.get('content-type')||'';
+      if(!contentType.includes('application/json')){
+        if(path==='/api/status'){staticMode=true;return localApi(path,data)}
+        throw Error('O servidor não respondeu como esperado.');
+      }
+      const result=await response.json();
+      if(!response.ok)throw Error(result.error||'Não foi possível continuar.');
+      return result;
+    }
+    function fail(error){el('error').textContent=error.message+' Tente novamente.'}
+    async function status(){try{const data=await api('/api/status');offset=data.serverTime-Date.now();updateTogether();unlockAt=Date.parse(data.unlockAt);el('error').textContent='';if(data.unlocked){clearInterval(timer);show('welcome')}else{show('locked');el('schedule').textContent='Abre em '+new Intl.DateTimeFormat('pt-BR',{timeZone:'America/Sao_Paulo',day:'2-digit',month:'2-digit',hour:'2-digit',minute:'2-digit'}).format(new Date(unlockAt))+' · horário de Brasília';tick()}}catch(error){fail(error)}}
+    function tick(){const remaining=Math.max(0,Math.ceil((unlockAt-Date.now()-offset)/1000));el('hours').textContent=String(Math.floor(remaining/3600)).padStart(2,'0');el('minutes').textContent=String(Math.floor(remaining%3600/60)).padStart(2,'0');el('seconds').textContent=String(remaining%60).padStart(2,'0');if(remaining===0){clearInterval(timer);status()}}
+    function question(q){show('quiz');el('progress').textContent='pergunta '+q.number+' de '+q.total;el('question').textContent=q.text;el('quiz-steps').replaceChildren();for(let i=1;i<=q.total;i++){const step=document.createElement('i');step.classList.toggle('active',i<=q.number);el('quiz-steps').append(step);}el('feedback').textContent='';el('options').replaceChildren();q.options.forEach((option,index)=>{const button=document.createElement('button');button.className='button';button.textContent='ABCD'[index]+') '+option;button.onclick=()=>answer(option);el('options').append(button)})}
+    async function answer(value){const buttons=[...el('options').children];buttons.forEach(b=>b.disabled=true);try{el('error').textContent='';const data=await api('/api/answer',{token,answer:value});if(!data.correct){el('feedback').textContent=data.feedback}else if(data.game){startGame()}else question(data.question)}catch(error){fail(error)}finally{buttons.forEach(b=>b.disabled=false)}}
+    const canvas=el('world'), ctx=canvas.getContext('2d');
+    const firstPlatforms=[{x:0,y:370,w:120,h:50},{x:185,y:310,w:72,h:18},{x:340,y:255,w:65,h:18},{x:495,y:300,w:70,h:18,moving:true},{x:655,y:235,w:62,h:18},{x:810,y:180,w:65,h:18},{x:990,y:180,w:110,h:18}];
+    const secondPlatforms=[{x:0,y:370,w:110,h:50},{x:185,y:300,w:60,h:18},{x:345,y:235,w:56,h:18,moving:true},{x:515,y:290,w:56,h:18},{x:670,y:225,w:54,h:18,moving:true},{x:835,y:155,w:52,h:18},{x:990,y:180,w:110,h:18}];
+    let platforms=firstPlatforms,phase=1;
+    let gameTime=0;
+    const platformX=p=>p.x+(p.moving?Math.sin(gameTime*.025)*22:0);
+    const keys={left:false,right:false,jump:false};
+    let player,playing=false,reached=false,lastFrame=0,accumulator=0,frameId;
+    function resetPlayer(){player={x:35,y:330,w:24,h:36,vx:0,vy:0,grounded:false};keys.jump=false}
+    function startGame(nextPhase=1){phase=nextPhase;platforms=phase===1?firstPlatforms:secondPlatforms;el('phase-label').textContent='fase '+phase+' de 2';keys.left=keys.right=keys.jump=false;cancelAnimationFrame(frameId);show('game');gameTime=0;resetPlayer();playing=true;reached=false;lastFrame=0;accumulator=0;el('game-status').textContent=phase===1?'A primeira carta leva à fase dois.':'Agora sim: essa carta guarda a mensagem.';el('open-letter').classList.add('hidden');canvas.focus({preventScroll:true});frameId=requestAnimationFrame(gameFrame)}
+    function updateGame(){
+      gameTime++;
+      player.vx=(Number(keys.right)-Number(keys.left))*3.5;
+      if(keys.jump&&player.grounded){player.vy=-11;player.grounded=false;keys.jump=false}
+      const bottom=player.y+player.h;
+      player.vy+=.43;player.x=Math.max(0,Math.min(1100-player.w,player.x+player.vx));player.y+=player.vy;player.grounded=false;
+      for(const p of platforms){const px=platformX(p);if(player.vy>=0&&bottom<=p.y&&player.y+player.h>=p.y&&player.x+player.w>px&&player.x<px+p.w){player.y=p.y-player.h;player.vy=0;player.grounded=true;if(p.moving)player.x+=Math.sin(gameTime*.025)*22-Math.sin((gameTime-1)*.025)*22;break}}
+      if(player.y>450){resetPlayer();el('game-status').textContent='Quase! Tenta mais uma vez.'}
+      if(player.x+player.w>1034&&player.x<1074&&player.y+player.h>=135&&player.y<180){reached=true;playing=false;keys.left=keys.right=keys.jump=false;el('game-status').textContent=phase===1?'Primeira fase completa! Vamos para a segunda?':'Você encontrou a carta!';el('open-letter').textContent=phase===1?'Ir para a fase 2 →':'Abrir a cartinha';el('open-letter').classList.remove('hidden');if(phase===2)openLetter()}
+    }
+    function drawGame(){
+      ctx.clearRect(0,0,720,420);const sky=ctx.createLinearGradient(0,0,0,420);sky.addColorStop(0,'#080f23');sky.addColorStop(1,'#1d3454');ctx.fillStyle=sky;ctx.fillRect(0,0,720,420);
+      ctx.fillStyle='#ccdcff';for(let i=0;i<45;i++){const x=(i*137+23)%720,y=(i*61+15)%300;ctx.globalAlpha=.3+(i%4)*.15;ctx.fillRect(x,y,2,2)}ctx.globalAlpha=1;
+      ctx.fillStyle='#d5e3ff';ctx.beginPath();ctx.arc(580,55,22,0,Math.PI*2);ctx.fill();ctx.fillStyle='#0e1930';ctx.beginPath();ctx.arc(590,49,21,0,Math.PI*2);ctx.fill();
+      ctx.save();ctx.translate(-Math.max(0,Math.min(380,player.x-260)),0);
+      for(const p of platforms){const px=platformX(p);ctx.fillStyle=p.moving?'#465280':'#293f5f';ctx.fillRect(px,p.y,p.w,p.h);ctx.fillStyle=p.moving?'#c0b2ed':'#8ca8cc';ctx.fillRect(px,p.y,p.w,4);if(p.moving){ctx.fillStyle='#dce7ff';ctx.font='15px sans-serif';ctx.fillText('↔',px+26,p.y+17)}}
+      // Envelope drawn by hand rather than an emoji.
+      ctx.fillStyle='#f5dfbb';ctx.fillRect(1034,143,36,25);ctx.strokeStyle='#a67a60';ctx.lineWidth=2;ctx.beginPath();ctx.moveTo(1034,143);ctx.lineTo(1052,157);ctx.lineTo(1070,143);ctx.stroke();
+      ctx.font='12px sans-serif';ctx.textAlign='center';ctx.fillStyle='#dce7ff';ctx.fillText('pra você',1052,130);
+      const x=player.x,y=player.y;
+      ctx.fillStyle='#342636';ctx.fillRect(x+3,y,19,24);ctx.fillStyle='#e8ba9a';ctx.fillRect(x+6,y+5,13,13);ctx.fillStyle='#342636';ctx.fillRect(x+4,y+1,16,7);ctx.fillStyle='#a8b5ec';ctx.fillRect(x+4,y+19,17,12);ctx.fillStyle='#d6e1ff';ctx.fillRect(x+4,y+31,6,5);ctx.fillRect(x+15,y+31,6,5);ctx.fillStyle='#20253b';ctx.fillRect(x+15,y+10,2,2);
+      ctx.fillStyle='#dce7ff';ctx.fillText('Adrielly',x+12,y-10);ctx.restore();
+    }
+    function gameFrame(now){if(!playing)return;if(!lastFrame)lastFrame=now;accumulator+=Math.min(now-lastFrame,60);lastFrame=now;while(accumulator>=1000/60&&playing){updateGame();accumulator-=1000/60}drawGame();if(playing)frameId=requestAnimationFrame(gameFrame)}
+    async function openLetter(){if(!reached)return;el('open-letter').disabled=true;try{const data=await api('/api/finish',{token,phase});if(data.nextPhase){startGame(data.nextPhase);return}el('message').textContent=data.message;el('error').textContent='';show('done');el('done').scrollIntoView({block:'start',behavior:'smooth'})}catch(error){fail(error)}finally{el('open-letter').disabled=false}}
+    el('open-letter').onclick=openLetter;
+    for(const button of document.querySelectorAll('[data-key]')){
+      button.addEventListener('pointerdown',e=>{e.preventDefault();button.setPointerCapture(e.pointerId);keys[button.dataset.key]=true});
+      for(const event of ['pointerup','pointercancel','lostpointercapture'])button.addEventListener(event,()=>keys[button.dataset.key]=false);
+    }
+    const keyMap={ArrowLeft:'left',a:'left',A:'left',ArrowRight:'right',d:'right',D:'right',' ':'jump',ArrowUp:'jump',w:'jump',W:'jump'};
+    window.addEventListener('keydown',e=>{if(!playing||!keyMap[e.key])return;e.preventDefault();if(!e.repeat)keys[keyMap[e.key]]=true});
+    window.addEventListener('keyup',e=>{if(keyMap[e.key])keys[keyMap[e.key]]=false});
+    window.addEventListener('blur',()=>{keys.left=keys.right=keys.jump=false});
+    el('start').onclick=async()=>{el('start').disabled=true;try{el('error').textContent='';const data=await api('/api/start',{});token=data.token;question(data.question)}catch(error){fail(error)}finally{el('start').disabled=false}};
+    updateTogether();
+    setInterval(updateTogether,1000);
+    status().then(()=>{if(!el('locked').classList.contains('hidden'))timer=setInterval(tick,1000)});
+  </script>
+</body>
+</html>
